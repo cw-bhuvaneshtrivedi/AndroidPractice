@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -47,8 +49,9 @@ public class UsedCarAdapter extends RecyclerView.Adapter<UsedCarDataViewHolder> 
         holder.priceText.setText(carData.getFormattedPrice());
         holder.emiText.setText("EMI starts at ");
         holder.emiValue.setText(carData.getEmiText());
-        Uri uri = Uri.parse(carData.getOriginalImgPath());
+        Uri uri = Uri.parse("https://imgd.aeplcdn.com/300x225"+carData.getOriginalImgPath());
 //        holder.carImage.setImageURI(uri);
+        Glide.with(context).load(uri).into(holder.carImage);
         holder.itemView.setOnClickListener(new View.OnClickListener(){
 
             @Override
