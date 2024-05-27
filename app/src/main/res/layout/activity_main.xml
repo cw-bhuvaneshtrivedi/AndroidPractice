@@ -13,22 +13,4 @@
         android:id="@+id/recyclerView"
         />
 
-
-    
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/recyclerView"
-        android:foregroundGravity="center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_height="wrap_content"
-            android:text="This is the text"
-            android:id="@+id/txtView"
-            />
-
-    </FrameLayout>
-
 </RelativeLayout>

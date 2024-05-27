@@ -6,6 +6,252 @@ public class UsedCarCardData {
     private String profileId;
     private String carName;
     private String city;
+
+    @Override
+    public String toString(){
+        return getCarName()+getAbsureScore()+getLargePicUrl()+getProfileId()+getCity()+getUsedCarDetail()+getPriceNumeric()+getPrice()+getHostUrl();
+    }
+
+    public String getAbsureScore() {
+        return AbsureScore;
+    }
+
+    public String getLargePicUrl() {
+        return largePicUrl;
+    }
+
+    public String getProfileId() {
+        return profileId;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getUsedCarDetail() {
+        return usedCarDetail;
+    }
+
+    public String getPriceNumeric() {
+        return priceNumeric;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getFormattedPrice() {
+        return formattedPrice;
+    }
+
+    public String getKms() {
+        return kms;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public String getIsPremium() {
+        return isPremium;
+    }
+
+    public String getUpdated() {
+        return updated;
+    }
+
+    public String getAreaName() {
+        return AreaName;
+    }
+
+    public String getMaskingNumber() {
+        return MaskingNumber;
+    }
+
+    public String getCertifiedLogoUrl() {
+        return CertifiedLogoUrl;
+    }
+
+    public String getInspectionText() {
+        return InspectionText;
+    }
+
+    public String getHasWarranty() {
+        return HasWarranty;
+    }
+
+    public String getOriginalImgPath() {
+        return OriginalImgPath;
+    }
+
+    public String getHostUrl() {
+        return HostUrl;
+    }
+
+    public String getDeliveryText() {
+        return deliveryText;
+    }
+
+    public int getDeliveryCityId() {
+        return deliveryCityId;
+    }
+
+    public String getShareUrl() {
+        return shareUrl;
+    }
+
+    public String getSmallPicUrl() {
+        return smallPicUrl;
+    }
+
+    public String getFuel() {
+        return Fuel;
+    }
+
+    public String getAdditionalFuel() {
+        return AdditionalFuel;
+    }
+
+    public String getGearBox() {
+        return GearBox;
+    }
+
+    public String getCertificationScore() {
+        return CertificationScore;
+    }
+
+    public String getFinanceEmi() {
+        return financeEmi;
+    }
+
+    public String getFinanceLinkText() {
+        return financeLinkText;
+    }
+
+    public int getMakeId() {
+        return makeId;
+    }
+
+    public int getModelId() {
+        return modelId;
+    }
+
+    public int getUsedCarCityId() {
+        return usedCarCityId;
+    }
+
+    public String getValuationUrl() {
+        return valuationUrl;
+    }
+
+    public String getValuationText() {
+        return valuationText;
+    }
+
+    public String getCertProgLogoUrl() {
+        return certProgLogoUrl;
+    }
+
+    public boolean isChatAvailable() {
+        return isChatAvailable;
+    }
+
+    public String getStockRecommendationsUrl() {
+        return stockRecommendationsUrl;
+    }
+
+    public int getCwBasePackageId() {
+        return cwBasePackageId;
+    }
+
+    public String getDealerCarsUrl() {
+        return dealerCarsUrl;
+    }
+
+    public String getPhotoCount() {
+        return photoCount;
+    }
+
+    public String getFinanceUrlV2() {
+        return financeUrlV2;
+    }
+
+    public String getFinanceTextV2() {
+        return financeTextV2;
+    }
+
+    public String getMoreCarsText() {
+        return moreCarsText;
+    }
+
+    public String getMoreCarsLink() {
+        return moreCarsLink;
+    }
+
+    public String getTagText() {
+        return tagText;
+    }
+
+    public String getDealershipLogoUrl() {
+        return dealershipLogoUrl;
+    }
+
+    public int getBookingStatus() {
+        return bookingStatus;
+    }
+
+    public String getCtaText() {
+        return ctaText;
+    }
+
+    public String getNotifyText() {
+        return notifyText;
+    }
+
+    public String getNotifySubText() {
+        return notifySubText;
+    }
+
+    public String getVirtualPhoneNumber() {
+        return virtualPhoneNumber;
+    }
+
+    public String getEmiText() {
+        return emiText;
+    }
+
+    public String getEmiCtaText() {
+        return emiCtaText;
+    }
+
+    public EmiDetail getEmiDetail() {
+        return emiDetail;
+    }
+
+    public String getStockId() {
+        return stockId;
+    }
+
+    public String getFormattedOriginalPrice() {
+        return formattedOriginalPrice;
+    }
+
+    public int getDealerId() {
+        return dealerId;
+    }
+
+    public String getSellerName() {
+        return sellerName;
+    }
+
+    public boolean isTrusted() {
+        return isTrusted;
+    }
+
     private String usedCarDetail;
     private String priceNumeric;
     private String price;
