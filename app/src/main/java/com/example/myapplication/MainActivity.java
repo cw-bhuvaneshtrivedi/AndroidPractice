@@ -19,13 +19,14 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
     private UsedCarAdapter customAdapter;
-
+    private List<UsedCarCardData> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        list = new ArrayList<>();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<UsedCarCardData> list = getData(1);
+        list = getData(1);
         ClickListener listener = new ClickListener() {
             @Override
             public void click(int index) {
@@ -47,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 page = page +1;
                 Log.e("TAG", "onLoadMore: inside page no: "+page );
                 getData(page);
+                Log.e("TAG", "onLoadMore: "+list.size());
             }
         });
     }
 
     private List<UsedCarCardData> getData(int page){
-        List<UsedCarCardData> list = new ArrayList<>();
 
         ApiInterface apiInterface= RetrofitClient.getRetrofitInstance().create(ApiInterface.class);
         Call<ApiResponse> call = apiInterface.getCarData(page,page*12);
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<ApiResponse>() {
             @Override
             public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                Log.e("TAG", "onResponse: "+list.size() );
                 for (int i = 0; i < response.body().getStockResults().length; i++) {
                     list.add(response.body().getStockResults()[i]);
                     customAdapter.notifyDataSetChanged();
